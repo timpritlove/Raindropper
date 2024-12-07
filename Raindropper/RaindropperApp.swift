@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@main
 struct RaindropperApp: App {
     var body: some Scene {
         WindowGroup {

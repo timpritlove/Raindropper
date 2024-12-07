@@ -6,6 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		221845072D0447130013FCCC /* ShareToRaindrop.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 221844FA2D0447130013FCCC /* ShareToRaindrop.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		224A7A162D044D670067194C /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A102D044D670067194C /* KeychainWrapper.swift */; };
+		224A7A172D044D670067194C /* RaindropAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A112D044D670067194C /* RaindropAPI.swift */; };
+		224A7A1D2D044D7D0067194C /* RaindropConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A1C2D044D7D0067194C /* RaindropConfig.swift */; };
+		224A7A1E2D044D7D0067194C /* RaindropConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A1C2D044D7D0067194C /* RaindropConfig.swift */; };
+		224A7A232D0458420067194C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A212D0458420067194C /* AppDelegate.swift */; };
+		224A7A242D0458420067194C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A222D0458420067194C /* AuthViewController.swift */; };
+		224A7A252D045C1E0067194C /* RaindropAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A112D044D670067194C /* RaindropAPI.swift */; };
+		224A7A262D045C4B0067194C /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A102D044D670067194C /* KeychainWrapper.swift */; };
+		224A7A282D045CA90067194C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A272D045CA90067194C /* main.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		221844DA2D0446090013FCCC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +34,51 @@
 			remoteGlobalIDString = 221844C72D0446080013FCCC;
 			remoteInfo = Raindropper;
 		};
+		221845052D0447130013FCCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 221844C02D0446080013FCCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 221844F92D0447130013FCCC;
+			remoteInfo = ShareToRaindrop;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2218450C2D0447130013FCCC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				221845072D0447130013FCCC /* ShareToRaindrop.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		221844C82D0446080013FCCC /* Raindropper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raindropper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		221844D92D0446090013FCCC /* RaindropperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaindropperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		221844E32D0446090013FCCC /* RaindropperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaindropperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		221844FA2D0447130013FCCC /* ShareToRaindrop.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareToRaindrop.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		224A7A102D044D670067194C /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		224A7A112D044D670067194C /* RaindropAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaindropAPI.swift; sourceTree = "<group>"; };
+		224A7A1C2D044D7D0067194C /* RaindropConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaindropConfig.swift; sourceTree = "<group>"; };
+		224A7A212D0458420067194C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = RaindropShare/AppDelegate.swift; sourceTree = "<group>"; };
+		224A7A222D0458420067194C /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = RaindropShare/AuthViewController.swift; sourceTree = "<group>"; };
+		224A7A272D045CA90067194C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		221845082D0447130013FCCC /* Exceptions for "ShareToRaindrop" folder in "ShareToRaindrop" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 221844F92D0447130013FCCC /* ShareToRaindrop */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		221844CA2D0446080013FCCC /* Raindropper */ = {
@@ -43,6 +94,14 @@
 		221844E62D0446090013FCCC /* RaindropperUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = RaindropperUITests;
+			sourceTree = "<group>";
+		};
+		221844FB2D0447130013FCCC /* ShareToRaindrop */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				221845082D0447130013FCCC /* Exceptions for "ShareToRaindrop" folder in "ShareToRaindrop" target */,
+			);
+			path = ShareToRaindrop;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,15 +128,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		221844F72D0447130013FCCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		221844BF2D0446080013FCCC = {
 			isa = PBXGroup;
 			children = (
+				224A7A272D045CA90067194C /* main.swift */,
+				224A7A212D0458420067194C /* AppDelegate.swift */,
+				224A7A222D0458420067194C /* AuthViewController.swift */,
+				224A7A202D044E230067194C /* Shared */,
 				221844CA2D0446080013FCCC /* Raindropper */,
 				221844DC2D0446090013FCCC /* RaindropperTests */,
 				221844E62D0446090013FCCC /* RaindropperUITests */,
+				221844FB2D0447130013FCCC /* ShareToRaindrop */,
 				221844C92D0446080013FCCC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +159,19 @@
 				221844C82D0446080013FCCC /* Raindropper.app */,
 				221844D92D0446090013FCCC /* RaindropperTests.xctest */,
 				221844E32D0446090013FCCC /* RaindropperUITests.xctest */,
+				221844FA2D0447130013FCCC /* ShareToRaindrop.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		224A7A202D044E230067194C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				224A7A1C2D044D7D0067194C /* RaindropConfig.swift */,
+				224A7A112D044D670067194C /* RaindropAPI.swift */,
+				224A7A102D044D670067194C /* KeychainWrapper.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +184,12 @@
 				221844C42D0446080013FCCC /* Sources */,
 				221844C52D0446080013FCCC /* Frameworks */,
 				221844C62D0446080013FCCC /* Resources */,
+				2218450C2D0447130013FCCC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				221845062D0447130013FCCC /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				221844CA2D0446080013FCCC /* Raindropper */,
@@ -163,6 +247,28 @@
 			productReference = 221844E32D0446090013FCCC /* RaindropperUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		221844F92D0447130013FCCC /* ShareToRaindrop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 221845092D0447130013FCCC /* Build configuration list for PBXNativeTarget "ShareToRaindrop" */;
+			buildPhases = (
+				221844F62D0447130013FCCC /* Sources */,
+				221844F72D0447130013FCCC /* Frameworks */,
+				221844F82D0447130013FCCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				221844FB2D0447130013FCCC /* ShareToRaindrop */,
+			);
+			name = ShareToRaindrop;
+			packageProductDependencies = (
+			);
+			productName = ShareToRaindrop;
+			productReference = 221844FA2D0447130013FCCC /* ShareToRaindrop.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +290,9 @@
 						CreatedOnToolsVersion = 16.1;
 						TestTargetID = 221844C72D0446080013FCCC;
 					};
+					221844F92D0447130013FCCC = {
+						CreatedOnToolsVersion = 16.1;
+					};
 				};
 			};
 			buildConfigurationList = 221844C32D0446080013FCCC /* Build configuration list for PBXProject "Raindropper" */;
@@ -203,6 +312,7 @@
 				221844C72D0446080013FCCC /* Raindropper */,
 				221844D82D0446090013FCCC /* RaindropperTests */,
 				221844E22D0446090013FCCC /* RaindropperUITests */,
+				221844F92D0447130013FCCC /* ShareToRaindrop */,
 			);
 		};
 /* End PBXProject section */
@@ -229,6 +339,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		221844F82D0447130013FCCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -236,6 +353,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224A7A232D0458420067194C /* AppDelegate.swift in Sources */,
+				224A7A242D0458420067194C /* AuthViewController.swift in Sources */,
+				224A7A282D045CA90067194C /* main.swift in Sources */,
+				224A7A262D045C4B0067194C /* KeychainWrapper.swift in Sources */,
+				224A7A1E2D044D7D0067194C /* RaindropConfig.swift in Sources */,
+				224A7A252D045C1E0067194C /* RaindropAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +376,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		221844F62D0447130013FCCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224A7A1D2D044D7D0067194C /* RaindropConfig.swift in Sources */,
+				224A7A162D044D670067194C /* KeychainWrapper.swift in Sources */,
+				224A7A172D044D670067194C /* RaindropAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +398,11 @@
 			isa = PBXTargetDependency;
 			target = 221844C72D0446080013FCCC /* Raindropper */;
 			targetProxy = 221844E42D0446090013FCCC /* PBXContainerItemProxy */;
+		};
+		221845062D0447130013FCCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 221844F92D0447130013FCCC /* ShareToRaindrop */;
+			targetProxy = 221845052D0447130013FCCC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -509,6 +647,60 @@
 			};
 			name = Release;
 		};
+		2218450A2D0447130013FCCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShareToRaindrop/ShareToRaindrop.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ2D45J5VM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShareToRaindrop/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShareToRaindrop;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.pritlove.Raindropper.ShareToRaindrop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2218450B2D0447130013FCCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShareToRaindrop/ShareToRaindrop.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ2D45J5VM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShareToRaindrop/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShareToRaindrop;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.pritlove.Raindropper.ShareToRaindrop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -544,6 +736,15 @@
 			buildConfigurations = (
 				221844F42D0446090013FCCC /* Debug */,
 				221844F52D0446090013FCCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		221845092D0447130013FCCC /* Build configuration list for PBXNativeTarget "ShareToRaindrop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2218450A2D0447130013FCCC /* Debug */,
+				2218450B2D0447130013FCCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,4 @@
+<key>keychain-access-groups</key>
+<array>
+    <string>$(AppIdentifierPrefix)your.bundle.identifier.shared</string>
+</array> 
