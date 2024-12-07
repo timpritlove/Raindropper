@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RaindropperApp: App {
+    @NSApplicationDelegateAdaptor(MainAppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

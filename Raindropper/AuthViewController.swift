@@ -41,9 +41,6 @@ class AuthViewController: NSViewController {
         
         view.addSubview(webView)
         
-        // Set UI delegate here
-        webView.uiDelegate = self
-        
         loadAuthPage()
     }
     
@@ -71,6 +68,19 @@ class AuthViewController: NSViewController {
 
 // Navigation delegate
 extension AuthViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if let url = navigationAction.request.url,
+           url.scheme == "raindrop-share" {
+            decisionHandler(.cancel)
+            
+            // Let the system handle the URL
+            NSWorkspace.shared.open(url)
+            return
+        }
+        
+        decisionHandler(.allow)
+    }
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("Page loaded")
         view.window?.makeFirstResponder(webView)

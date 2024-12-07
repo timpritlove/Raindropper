@@ -16,16 +16,5 @@
 		<key>NSExtensionPrincipalClass</key>
 		<string>$(PRODUCT_MODULE_NAME).ShareViewController</string>
 	</dict>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>raindrop-share</string>
-			</array>
-			<key>CFBundleURLName</key>
-			<string>io.raindrop.share</string>
-		</dict>
-	</array>
 </dict>
 </plist>

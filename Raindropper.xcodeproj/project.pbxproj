@@ -12,11 +12,8 @@
 		224A7A172D044D670067194C /* RaindropAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A112D044D670067194C /* RaindropAPI.swift */; };
 		224A7A1D2D044D7D0067194C /* RaindropConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A1C2D044D7D0067194C /* RaindropConfig.swift */; };
 		224A7A1E2D044D7D0067194C /* RaindropConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A1C2D044D7D0067194C /* RaindropConfig.swift */; };
-		224A7A232D0458420067194C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A212D0458420067194C /* AppDelegate.swift */; };
-		224A7A242D0458420067194C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A222D0458420067194C /* AuthViewController.swift */; };
 		224A7A252D045C1E0067194C /* RaindropAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A112D044D670067194C /* RaindropAPI.swift */; };
 		224A7A262D045C4B0067194C /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A102D044D670067194C /* KeychainWrapper.swift */; };
-		224A7A282D045CA90067194C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A7A272D045CA90067194C /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,9 +62,6 @@
 		224A7A102D044D670067194C /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		224A7A112D044D670067194C /* RaindropAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaindropAPI.swift; sourceTree = "<group>"; };
 		224A7A1C2D044D7D0067194C /* RaindropConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaindropConfig.swift; sourceTree = "<group>"; };
-		224A7A212D0458420067194C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = RaindropShare/AppDelegate.swift; sourceTree = "<group>"; };
-		224A7A222D0458420067194C /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = RaindropShare/AuthViewController.swift; sourceTree = "<group>"; };
-		224A7A272D045CA90067194C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -141,9 +135,6 @@
 		221844BF2D0446080013FCCC = {
 			isa = PBXGroup;
 			children = (
-				224A7A272D045CA90067194C /* main.swift */,
-				224A7A212D0458420067194C /* AppDelegate.swift */,
-				224A7A222D0458420067194C /* AuthViewController.swift */,
 				224A7A202D044E230067194C /* Shared */,
 				221844CA2D0446080013FCCC /* Raindropper */,
 				221844DC2D0446090013FCCC /* RaindropperTests */,
@@ -353,9 +344,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				224A7A232D0458420067194C /* AppDelegate.swift in Sources */,
-				224A7A242D0458420067194C /* AuthViewController.swift in Sources */,
-				224A7A282D045CA90067194C /* main.swift in Sources */,
 				224A7A262D045C4B0067194C /* KeychainWrapper.swift in Sources */,
 				224A7A1E2D044D7D0067194C /* RaindropConfig.swift in Sources */,
 				224A7A252D045C1E0067194C /* RaindropAPI.swift in Sources */,
