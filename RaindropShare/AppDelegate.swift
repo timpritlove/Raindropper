@@ -12,6 +12,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func application(_ application: NSApplication, open urls: [URL]) {
+        print("Received URL: \(urls)")
+        
         guard let url = urls.first,
               url.scheme == "raindrop-share" else {
             return
@@ -20,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if url.host == "authenticate" {
             showAuthWindow()
         } else if url.host == "oauth-callback" {
+            print("Received OAuth callback")
             handleOAuthCallback(url)
         }
     }
@@ -44,17 +47,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func handleOAuthCallback(_ url: URL) {
         guard let components = URLComponents(url: url, resolvingAgainstBaseURL: true),
               let code = components.queryItems?.first(where: { $0.name == "code" })?.value else {
+            print("Failed to get authorization code")
             return
         }
+        
+        print("Got authorization code: \(code)")
         
         Task {
             do {
                 try await raindropAPI.exchangeCodeForToken(code)
-                authWindow?.close()
-                authWindow = nil
-                NSApp.terminate(nil)
+                print("Successfully exchanged code for token")
+                await MainActor.run {
+                    authWindow?.close()
+                    authWindow = nil
+                    NSApp.terminate(nil)
+                }
             } catch {
-                // Handle error
+                print("Error exchanging code: \(error)")
             }
         }
     }
