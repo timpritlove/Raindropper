@@ -73,8 +73,15 @@ extension AuthViewController: WKNavigationDelegate {
            url.scheme == "raindrop-share" {
             decisionHandler(.cancel)
             
-            // Let the system handle the URL
-            NSWorkspace.shared.open(url)
+            // Extract code and post notification instead of using NSWorkspace
+            if let components = URLComponents(url: url, resolvingAgainstBaseURL: true),
+               let code = components.queryItems?.first(where: { $0.name == "code" })?.value {
+                NotificationCenter.default.post(
+                    name: Notification.Name("RaindropOAuthCallback"),
+                    object: nil,
+                    userInfo: ["code": code]
+                )
+            }
             return
         }
         

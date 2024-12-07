@@ -5,8 +5,37 @@ class MainAppDelegate: NSObject, NSApplicationDelegate {
     private let raindropAPI = RaindropAPI()
     
     func applicationDidFinishLaunching(_ notification: Notification) {
+        // Register for OAuth callback notifications
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleOAuthCallback(_:)),
+            name: Notification.Name("RaindropOAuthCallback"),
+            object: nil
+        )
+        
         if !raindropAPI.isAuthenticated {
             showAuthWindow()
+        }
+    }
+    
+    @objc private func handleOAuthCallback(_ notification: Notification) {
+        guard let code = notification.userInfo?["code"] as? String else {
+            return
+        }
+        
+        print("Got authorization code: \(code)")
+        
+        Task {
+            do {
+                try await raindropAPI.exchangeCodeForToken(code)
+                print("Successfully exchanged code for token")
+                await MainActor.run {
+                    authWindow?.close()
+                    authWindow = nil
+                }
+            } catch {
+                print("Error exchanging code: \(error)")
+            }
         }
     }
     
@@ -25,31 +54,5 @@ class MainAppDelegate: NSObject, NSApplicationDelegate {
         authWindow = window
         window.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
-    }
-    
-    func application(_ application: NSApplication, open urls: [URL]) {
-        print("Received URLs: \(urls)")
-        
-        guard let url = urls.first,
-              let components = URLComponents(url: url, resolvingAgainstBaseURL: true),
-              let code = components.queryItems?.first(where: { $0.name == "code" })?.value else {
-            print("Failed to get authorization code")
-            return
-        }
-        
-        print("Got authorization code: \(code)")
-        
-        Task {
-            do {
-                try await raindropAPI.exchangeCodeForToken(code)
-                print("Successfully exchanged code for token")
-                await MainActor.run {
-                    authWindow?.close()
-                    authWindow = nil
-                }
-            } catch {
-                print("Error exchanging code: \(error)")
-            }
-        }
     }
 } 
