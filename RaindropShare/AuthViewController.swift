@@ -3,18 +3,18 @@ import Cocoa
 
 class AuthViewController: NSViewController {
     private let webView = WKWebView()
-    private let clientId = "YOUR_CLIENT_ID" // Get this from Raindrop.io
-    private let redirectUri = "raindrop-share://oauth-callback"
     
     override func loadView() {
-        view = NSView()
-        view.frame = NSRect(x: 0, y: 0, width: 800, height: 600)
+        // Create the main view
+        view = NSView(frame: NSRect(x: 0, y: 0, width: 800, height: 600))
         
-        webView.navigationDelegate = self
+        // Configure WebView
         webView.frame = view.bounds
         webView.autoresizingMask = [.width, .height]
+        webView.navigationDelegate = self
         view.addSubview(webView)
         
+        // Load the auth page immediately
         loadAuthPage()
     }
     
@@ -27,20 +27,25 @@ class AuthViewController: NSViewController {
             URLQueryItem(name: "response_type", value: "code")
         ]
         
-        let request = URLRequest(url: components.url!)
-        webView.load(request)
+        if let url = components.url {
+            print("Loading URL: \(url)") // Add this for debugging
+            let request = URLRequest(url: url)
+            webView.load(request)
+        }
     }
 }
 
+// Make sure we have the navigation delegate
 extension AuthViewController: WKNavigationDelegate {
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        if let url = navigationAction.request.url,
-           url.scheme == "raindrop-share" {
-            NSWorkspace.shared.open(url)
-            decisionHandler(.cancel)
-            return
-        }
-        
-        decisionHandler(.allow)
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        print("Page loaded")
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        print("Navigation failed: \(error)")
+    }
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        print("Provisional navigation failed: \(error)")
     }
 } 
